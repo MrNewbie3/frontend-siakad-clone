@@ -5,14 +5,14 @@ import Navbar from "../components/main/navbar";
 import Announcement from "../components/main/announcement";
 import Report from "../components/main/report";
 
-function main() {
+function Dashboard() {
   return (
     <>
       <div className="App">
         <Navbar />
         <div className="grid grid-cols-6">
           <Sidebar />
-          <div className="container col-span-5 px5">
+          <div className="container col-span-5 px-5 bg-gray-100">
             <Main />
             <Announcement />
             <Report />
@@ -23,4 +23,4 @@ function main() {
   );
 }
 
-export default main;
+export default Dashboard;
