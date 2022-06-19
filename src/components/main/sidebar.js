@@ -3,9 +3,9 @@ class Sidebar extends Component {
   state = {};
   render() {
     return (
-      <div className="App w-64">
+      <div className="App w-64 ">
         <aside className="w-64 " aria-label="Sidebar">
-          <div className="overflow-y-scroll h-screen py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
+          <div className="overflow-y-scroll h-screen py-4 px-3 bg-stone-100  dark:bg-gray-800">
             <ul className="space-y-2">
               <li>
                 <a href="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
