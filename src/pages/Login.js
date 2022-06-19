@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import axios from "../api/axios";
-import Main from "./Main";
+import Dashboard from "./Dashboard";
 
 function Login() {
   const { setAuth } = useContext(AuthContext);
@@ -32,7 +32,7 @@ function Login() {
   return (
     <>
       {success ? (
-        <Main />
+        <Dashboard />
       ) : (
         <section>
           <div className="min-h-screen bg-gray-50 flex flex-col justify-center">
@@ -74,6 +74,7 @@ function Login() {
                     id="password"
                     onChange={(e) => setPwd(e.target.value)}
                     value={pwd}
+                    autoComplete="off"
                     required
                     className="w-full p-2 border border-gray-300 rounded mt-1"
                   />
