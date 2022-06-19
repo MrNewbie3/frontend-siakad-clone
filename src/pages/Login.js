@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import axios from "../api/axios";
 import Dashboard from "./Dashboard";
+import { Link } from "react-router-dom";
 
 function Login() {
   const { setAuth } = useContext(AuthContext);
@@ -47,7 +48,7 @@ function Login() {
                 <div>
                   <label
                     htmlFor="username"
-                    className="text-sm font-bold text-gray-600 block"
+                    className="text-sm font-small text-gray-600 block"
                   >
                     Username :
                   </label>
@@ -64,7 +65,7 @@ function Login() {
                 </div>
                 <div>
                   <label
-                    className="text-sm font-bold text-gray-600 block"
+                    className="text-sm font-small text-gray-600 block"
                     htmlFor="password"
                   >
                     Password :
@@ -90,9 +91,12 @@ function Login() {
                     </label>
                   </div>
                   <div>
-                    <a href="" className="font-medium text-sm text-gray-500">
+                    <Link
+                      to="/forgot"
+                      className="font-medium text-sm text-gray-500"
+                    >
                       Forgot Password?
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <button className="w-full py-2 px-4 bg-gray-700 text-white  rounded-md text-sm font-medium">
