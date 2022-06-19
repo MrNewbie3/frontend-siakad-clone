@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FaIdCard } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-class Report extends React.Component {
+class Report extends Component {
   state = {};
   render() {
     return (
@@ -13,7 +13,9 @@ class Report extends React.Component {
               <p>Waktu Habis</p>
             </div>
             <div className="justify-self-end">
-              <IconContext.Provider value={{ style: { fontSize: "50px", color: "silver" } }}>
+              <IconContext.Provider
+                value={{ style: { fontSize: "50px", color: "silver" } }}
+              >
                 <FaIdCard />
               </IconContext.Provider>
             </div>
@@ -27,19 +29,27 @@ class Report extends React.Component {
               <div className="border-solid border border-gray-300 grid-cols-1 divide-y divide-gray-300 ">
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">sakit</div>
-                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">izin</div>
-                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">masuk</div>
-                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">alpha</div>
-                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
               </div>
             </div>
@@ -55,19 +65,27 @@ class Report extends React.Component {
               <div className="border-solid border border-gray-300 grid-cols-1 divide-y divide-gray-300 ">
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">sakit</div>
-                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">izin</div>
-                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">masuk</div>
-                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">alpha</div>
-                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
+                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">
+                    1 hari
+                  </div>
                 </div>
               </div>
             </div>
