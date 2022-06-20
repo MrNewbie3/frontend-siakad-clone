@@ -3,38 +3,11 @@ import { FaIdCard } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import Student from "../Student";
+import studentData from "../../data/studentData";
 
 class Report extends Component {
   state = {};
   render() {
-    const studentData = [
-      {
-        id: 1,
-        name: "Ajiawan Putra",
-        kelas: "XI rpl 6",
-        jamAbs: "06:00:01",
-      },
-      {
-        id: 2,
-        name: "Dani Saputro",
-        kelas: "XI rpl 8",
-        jamAbs: "06:00:02",
-      },
-      {
-        id: 3,
-        name: "Ahmad Sahroni",
-        kelas: "XI rpl 1",
-        jamAbs: "06:00:03",
-      },
-      {
-        id: 4,
-        name: "Sangaji Putra Bakti",
-        kelas: "XI rpl 2",
-        jamAbs: "06:00:04",
-      },
-    ];
-
     return (
       <div className="container grid grid-cols-11 gap-x-8 my-10">
         <div className="card 1 col-span-4">
@@ -106,7 +79,7 @@ class Report extends Component {
             <div className="content w-full bg-white border px-3 py-5">
               {studentData.map((student) => (
                 <div key={student.id}>
-                  <Student
+                  <StudentItem
                     id={student.id}
                     name={student.name}
                     kelas={student.kelas}
@@ -121,5 +94,25 @@ class Report extends Component {
     );
   }
 }
+
+const StudentItem = (props) => {
+  const { id, name, kelas, jamAbs } = props;
+
+  return (
+    <div className="my-2">
+      <div className="container  border border-grey-100 py-2 px-2 grid grid-cols-3">
+        <div className="rounded-full bg-yellow-200 w-14 h-14"></div>
+        <div className=" col-span-2 wrapper w-full">
+          <p className="text">
+            {id}. {name}
+          </p>
+          <p className="">
+            {kelas} - ({jamAbs})
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Report;
