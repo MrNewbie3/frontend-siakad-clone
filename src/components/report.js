@@ -8,6 +8,7 @@ import studentData from "../data/studentData";
 class Report extends Component {
   state = {};
   render() {
+    console.log("hello");
     return (
       <div className="container grid grid-cols-11 gap-x-8 my-10">
         <div className="card 1 col-span-4">
@@ -17,9 +18,7 @@ class Report extends Component {
               <p>Waktu Habis</p>
             </div>
             <div className="justify-self-end">
-              <IconContext.Provider
-                value={{ style: { fontSize: "50px", color: "silver" } }}
-              >
+              <IconContext.Provider value={{ style: { fontSize: "50px", color: "silver" } }}>
                 <FaIdCard />
               </IconContext.Provider>
             </div>
@@ -33,27 +32,19 @@ class Report extends Component {
               <div className="border-solid border border-gray-300 grid-cols-1 divide-y divide-gray-300 ">
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">sakit</div>
-                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">
-                    1 hari
-                  </div>
+                  <div className="banner justify-self-end text-xs bg-blue-800 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">izin</div>
-                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">
-                    1 hari
-                  </div>
+                  <div className="banner justify-self-end text-xs bg-yellow-400 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">masuk</div>
-                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">
-                    1 hari
-                  </div>
+                  <div className="banner justify-self-end text-xs bg-blue-500 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
                 </div>
                 <div className="row grid grid-cols-2 px-5 py-3">
                   <div className="text">alpha</div>
-                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">
-                    1 hari
-                  </div>
+                  <div className="banner justify-self-end text-xs bg-red-700 text-white font-bold px-2 py-1 rounded-sm">1 hari</div>
                 </div>
               </div>
             </div>
@@ -79,12 +70,7 @@ class Report extends Component {
             <div className="content w-full bg-white border px-3 py-5">
               {studentData.map((student) => (
                 <div key={student.id}>
-                  <StudentItem
-                    id={student.id}
-                    name={student.name}
-                    kelas={student.kelas}
-                    jamAbs={student.jamAbs}
-                  />
+                  <StudentItem id={student.id} name={student.name} kelas={student.kelas} jamAbs={student.jamAbs} />
                 </div>
               ))}
             </div>
