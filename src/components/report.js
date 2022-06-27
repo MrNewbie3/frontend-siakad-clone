@@ -10,8 +10,8 @@ class Report extends Component {
   render() {
     console.log("hello");
     return (
-      <div className="container grid grid-cols-11 gap-x-8 my-10">
-        <div className="card 1 col-span-4">
+      <div className="container grid grid-cols-12 xl:grid-cols-11 gap-x-8 my-10">
+        <div className="card 1 xl:pb-5 col-span-12  xl:col-span-4">
           <div className="card persentase w-full bg-white grid-cols-2 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.3)] px-5 py-5 grid justify-items-stretch">
             <div className="text">
               <p>Belum Absen (Presensi 6:00 - 09:00)</p>
@@ -50,7 +50,7 @@ class Report extends Component {
             </div>
           </div>
         </div>
-        <div className="card 2 col-span-4">
+        <div className="card 2 py-5 col-span-12 xl:col-span-4 xl:py-0">
           <div className="card 2 preview grid ">
             <div className="header bg-slate-500 px-5 py-5 ">
               <p className="text-white">2022</p>
@@ -61,8 +61,8 @@ class Report extends Component {
             </div>
           </div>
         </div>
-        <div className="card 3 col-span-3">
-          <div className="card 2 preview grid ">
+        <div className="card 3 py-5 col-span-12 xl:col-span-3 xl:py-0">
+          <div className="card 2 preview grid w-full">
             <div className="header bg-blue-800 px-5 py-5 ">
               <p className="text-white">100 Besar</p>
               <p className="text-white">kehadiran Pertama</p>

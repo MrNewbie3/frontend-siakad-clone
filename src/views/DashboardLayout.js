@@ -42,7 +42,7 @@ class Navbar extends Component {
         <div className="h-screen overflow-hidden bg-red-700">
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center xl:hidden">
                 {this.state.open ? (
                   <Link to="#">
                     <AiOutlineClose onClick={this.hideSidebar.bind(this)} className="h-6 w-6" />
@@ -53,7 +53,7 @@ class Navbar extends Component {
                   </Link>
                 )}
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex-1 flex items-center justify-center xl:items-stretch xl:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img className="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
                   <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
@@ -110,9 +110,9 @@ class Navbar extends Component {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-6">
+          <div className="lg:grid  xl:grid xl:grid-cols-6  ">
             {this.state.open ? (
-              <div className="App w-64 sm:block">
+              <div className="App w-64 xl:block">
                 <aside className="w-64 " aria-label="Sidebar">
                   <div className="overflow-hidden h-screen py-4 px-3 bg-stone-100 dark:bg-gray-800">
                     <ul className="space-y-2">
@@ -128,7 +128,7 @@ class Navbar extends Component {
                 </aside>
               </div>
             ) : (
-              <div className="App w-64 hidden sm:block">
+              <div className="App w-64  hidden xl:block">
                 <aside className="w-64 " aria-label="Sidebar">
                   <div className="overflow-hidden h-screen py-4 px-3 bg-stone-100 dark:bg-gray-800">
                     <ul className="space-y-2">
@@ -144,7 +144,7 @@ class Navbar extends Component {
                 </aside>
               </div>
             )}
-            <div className="container col-span-5 px-5 bg-gray-100 h-screen overflow-scroll">{this.props.data}</div>
+            <div className=" container xl:col-span-5  px-5 bg-gray-100 h-screen overflow-scroll">{this.props.data}</div>
           </div>
         </div>
       </>
