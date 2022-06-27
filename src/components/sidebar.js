@@ -6,7 +6,7 @@ class Sidebar extends Component {
   state = {};
   render() {
     return (
-      <div className="App w-64 ">
+      <div className="App w-64  sm:block">
         <aside className="w-64 " aria-label="Sidebar">
           <div className="overflow-y-scroll h-screen py-4 px-3 bg-stone-100 dark:bg-gray-800">
             <ul className="space-y-2">

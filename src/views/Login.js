@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import AuthContext from "../context/AuthProvider";
 import axios from "../api/axios";
-import Dashboard from "./Dashboard";
+import Dashboard from "./DashboardLayout";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -33,7 +33,7 @@ function Login() {
   return (
     <>
       {success ? (
-        <Dashboard />
+        <Link to="/dashboard" />
       ) : (
         <section>
           <div className="min-h-screen bg-gray-50 flex flex-col justify-center">

@@ -1,8 +1,11 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Dashboard from "./views/Dashboard";
+import DashboardLayout from "./views/DashboardLayout";
 import Login from "./views/Login";
 import ForgotPassword from "./views/ForgotPassword";
 import NotFound from "./views/errors/NotFound";
+import Main from "./components/main";
+import Announcement from "./components/announcement";
+import Report from "./components/report";
 
 function App() {
   return (
@@ -11,7 +14,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/forgot" element={<ForgotPassword />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <DashboardLayout
+                data={[<Main />, <Announcement />, <Report />]}
+              />
+            }
+          />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
