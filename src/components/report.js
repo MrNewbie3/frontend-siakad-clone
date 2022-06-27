@@ -3,7 +3,7 @@ import { FaIdCard } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import studentData from "../../data/studentData";
+import studentData from "../data/studentData";
 
 class Report extends Component {
   state = {};
