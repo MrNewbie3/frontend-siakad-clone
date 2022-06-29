@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { FaIdCard } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import studentData from "../data/studentData";
+import TextField from "@mui/material/TextField";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 
 class Report extends Component {
   state = {};
   render() {
-    console.log("hello");
+    const [value, setValue] = (React.useState < Date) | (null > new Date());
     return (
-      <div className="container grid grid-cols-12 xl:grid-cols-11 gap-x-8 my-10">
+      <div className="grid grid-cols-12 xl:grid-cols-11 gap-x-8 my-10">
         <div className="card 1 xl:pb-5 col-span-12  xl:col-span-4">
           <div className="card persentase w-full bg-white grid-cols-2 drop-shadow-[0px_0px_10px_rgba(0,0,0,0.3)] px-5 py-5 grid justify-items-stretch">
             <div className="text">
@@ -57,7 +60,17 @@ class Report extends Component {
               <p className="text-white">Sunday, Jun 19</p>
             </div>
             <div className="content bg-white px-5 py-5 grid ">
-              <Calendar className={"justify-self-center "} />
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <StaticDatePicker
+                  orientation="landscape"
+                  openTo="day"
+                  value={value}
+                  onChange={(newValue) => {
+                    setValue(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
             </div>
           </div>
         </div>

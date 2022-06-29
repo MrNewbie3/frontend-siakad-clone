@@ -40,7 +40,7 @@ class Navbar extends Component {
     return (
       <>
         <div className="h-screen overflow-hidden bg-red-700">
-          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-7xl grid mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center xl:hidden">
                 {this.state.open ? (
@@ -135,7 +135,7 @@ class Navbar extends Component {
                       {dataSidebar.map((item) => {
                         return (
                           <li key={item.id}>
-                            <SidebarItem icon={item.icon} name={item.name} />
+                            <SidebarItem icon={item.icon} name={item.name} page={item.page} />
                           </li>
                         );
                       })}
@@ -144,7 +144,7 @@ class Navbar extends Component {
                 </aside>
               </div>
             )}
-            <div className=" container xl:col-span-5  px-5 bg-gray-100 h-screen overflow-scroll">{this.props.data}</div>
+            <div className="sm:flex sm:flex-col px-5 sm:w-screen xl:w-auto xl:col-span-5 xl:grid  bg-gray-100 h-screen overflow-scroll">{this.props.data}</div>
           </div>
         </div>
       </>
@@ -153,10 +153,12 @@ class Navbar extends Component {
 }
 
 const SidebarItem = (props) => {
-  const { name, icon } = props;
-
+  const { name, icon, page } = props;
+  const handleClick = (e) => {
+    console.log(e.target);
+  };
   return (
-    <Link to="#" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+    <Link to={page} onClick={handleClick} className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
       {icon}
       <span className="ml-3">{name}</span>
     </Link>
