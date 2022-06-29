@@ -3,15 +3,18 @@ import { FaIdCard } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import "react-calendar/dist/Calendar.css";
 import studentData from "../data/studentData";
-import TextField from "@mui/material/TextField";
+
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
+import { CalendarPicker } from "@mui/x-date-pickers/CalendarPicker";
 
+import Grid from "@mui/material/Grid";
+
+const minDate = new Date("2020-01-01T00:00:00.000");
+const maxDate = new Date("2034-01-01T00:00:00.000");
 class Report extends Component {
   state = {};
   render() {
-    const [value, setValue] = (React.useState < Date) | (null > new Date());
     return (
       <div className="grid grid-cols-12 xl:grid-cols-11 gap-x-8 my-10">
         <div className="card 1 xl:pb-5 col-span-12  xl:col-span-4">
@@ -59,17 +62,11 @@ class Report extends Component {
               <p className="text-white">2022</p>
               <p className="text-white">Sunday, Jun 19</p>
             </div>
-            <div className="content bg-white px-5 py-5 grid ">
+            <div className="content bg-white px-5  grid ">
               <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <StaticDatePicker
-                  orientation="landscape"
-                  openTo="day"
-                  value={value}
-                  onChange={(newValue) => {
-                    setValue(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
+                <Grid>
+                  <CalendarPicker readOnly={true} />
+                </Grid>
               </LocalizationProvider>
             </div>
           </div>
